@@ -6,7 +6,7 @@ public class Transportas {
 
 
     public Transportas(String marke, String modelis, int metai) {
-     this.marke = marke;
+     this.marke = marke;//priskiriama savybe prie reiksmes
      this.modelis = modelis;
      this.metai = metai;
     }

@@ -4,12 +4,15 @@ import java.time.Duration;
 
 public class KayakBase {
 
-    protected static WebDriver driver;
+    protected static WebDriver driver;//savybe  
 
-    public  KayakBase(WebDriver driver){//konstruktorius
+    public KayakBase(WebDriver driver){//konstruktorius
         KayakBase.driver= driver;
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("Kayak.com");
+
+    }
+    public static void goTo() {
+        driver.get("https://kayak.com");
     }
 }

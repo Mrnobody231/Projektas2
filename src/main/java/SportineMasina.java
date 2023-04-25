@@ -1,4 +1,6 @@
-public class SportineMasina extends Masina extends Transportas {
+public class SportineMasina extends Masina {
+
+
 
     int didziausiasGreitis;
 
@@ -14,8 +16,8 @@ public class SportineMasina extends Masina extends Transportas {
     }
 
     public static void main(String[]args){
-        SportineMasina greitis = new SportineMasina("4", "60", "Opel","Zefira",
-                "2001" );
+        SportineMasina greitis = new SportineMasina(4, 60, "Opel","Zefira",
+                2001 );
         System.out.println("dureliuSkaicius:" + greitis.getDureliuSkaicius() + "," + "didziausias Greitis:" +
                 greitis.getDidziausiasGreitis() + "," + "Marke:" + greitis.getMarke() + ","
         + "Modelis:" + greitis.getModelis() + "," + "Metai:" + greitis.getMetai());

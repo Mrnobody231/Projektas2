@@ -27,7 +27,9 @@ public class KayakTest extends KayakBase{
     public void KayakStayTest(){
         KayakHome.goTo();
         KayakHome.stays();
+        KayakHome.searchBox();
     }
+
 
     @AfterClass
     public static void tearDown(){

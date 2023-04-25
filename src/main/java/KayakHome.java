@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class KayakHome extends KayakBase {
 
-    private static final By stayButton = By.xpath("//*[@id=\"Bfkv\"]/div/div[2]/nav[2]/div/a[2]/div");
+    private static final By stayButton = By.cssSelector("a[aria-label='Search for hotels'] div[class='hsCY-menu-item-title']");
 
 
     public KayakHome(WebDriver driver) {
@@ -24,6 +24,14 @@ public class KayakHome extends KayakBase {
             Thread.sleep(5000);
         } catch (Exception e) {
 
+        }
+    }
+    public static void searchBox(){
+        String[] searchTerm = {"Narutis"};
+        WebElement searchBox = driver.findElement(By.cssSelector("input[placeholder='Enter a city, hotel, airport, address or landmark']"));
+        for(String term : searchTerm){
+            searchBox.sendKeys(term);
+            searchBox.submit();
         }
     }
 }
